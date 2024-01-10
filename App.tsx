@@ -1,13 +1,13 @@
-import {StatusBar} from 'expo-status-bar';
 import {StyleSheet, Text, View, SafeAreaView} from 'react-native';
-
 import Streams from "./pages/streams";
+import Header from "./pages/header";
 import "./ReactotronConfig"
 
 export default function App() {
     return (
         <SafeAreaView style={styles.container}>
             <View>
+                <Header />
                 <Streams/>
             </View>
         </SafeAreaView>
@@ -16,6 +16,6 @@ export default function App() {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
+        backgroundColor: '#F8F8F8'
     },
 });

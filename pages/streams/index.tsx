@@ -12,6 +12,14 @@ const Streams: React.FC = () => {
             <Card />
             <Card />
             <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
         </ScrollView>
     );
 };

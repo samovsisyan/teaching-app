@@ -1,5 +1,7 @@
-import { HorizontalRule } from './horizontalRule/index.'
+import { HorizontalRule } from './horizontalRule'
+import { Buttons } from './buttons'
 
 export {
-    HorizontalRule
+    HorizontalRule,
+    Buttons
 }

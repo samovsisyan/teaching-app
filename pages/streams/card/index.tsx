@@ -2,12 +2,13 @@
 import React from 'react';
 import {View, Image, Text} from 'react-native';
 import {stylesCard} from "./stylesCard";
-import {HorizontalRule} from "../../../elements";
+import {Buttons, HorizontalRule} from "../../../elements";
+const btnIcon = require('../../../assets/image/streams/Vector.png')
 
-const Card: React.FC = () => {
+const   Card: React.FC = () => {
     return (
         <View>
-            <HorizontalRule />
+            <HorizontalRule  marginBottom={8} marginTop={8}/>
             <View style={stylesCard.cardContainer}>
                 <View style={stylesCard.head}>
                     <View style={stylesCard.userFaceInfo}>
@@ -33,12 +34,10 @@ const Card: React.FC = () => {
                         <Text style={stylesCard.ticketPrice}>$8 USD</Text>
                     </View>
                     <View style={stylesCard.ticketBtnContent}>
-                        <View style={stylesCard.ticketButton}>
-                            <Text style={stylesCard.ticketBtnTitle}>Buy Ticket</Text>
-                            <Image
-                                style={stylesCard.ticketBtnIcon}
-                                source={require('../../../assets/image/streams/Vector.png')}/>
-                        </View>
+                        <Buttons
+                            btnTitle='Buy Ticket'
+                            btnIcon={btnIcon}
+                        />
                     </View>
                 </View>
             </View>

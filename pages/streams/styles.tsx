@@ -6,7 +6,7 @@ export const styles = StyleSheet.create({
         flexDirection: 'column',
         // height: 100,
         // padding: 20,
-        background: '#FFF',
+        backgroundColor: '#FFF',
         boxShadow: '0px 4px 20px 0px rgba(187, 187, 187, 0.25)',
     },
     title: {
@@ -16,5 +16,7 @@ export const styles = StyleSheet.create({
         fontSize: 24,
         fontStyle: 'normal',
         fontWeight: '900',
+        marginTop: 16,
+        marginBottom: 8,
     },
 });

@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
-
+import { stylesHorizontalRule } from './stylesHorizontalRule'
 interface HorizontalRuleProps {
     marginTop: number;
     marginBottom: number;
@@ -8,13 +8,6 @@ interface HorizontalRuleProps {
 
 export const HorizontalRule: React.FC<HorizontalRuleProps> = ({ marginTop = 8, marginBottom = 8 }) => {
     return (
-        <View style={[styles.hr, { marginTop, marginBottom }]} />
+        <View style={[stylesHorizontalRule.hr, { marginTop, marginBottom }]} />
     );
 };
-
-const styles = StyleSheet.create({
-    hr: {
-        borderBottomColor: '#E8E8E8',
-        borderBottomWidth: 0.5,
-    },
-});
