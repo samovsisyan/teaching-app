@@ -8,6 +8,7 @@ export const styles = StyleSheet.create({
         // padding: 20,
         backgroundColor: '#FFF',
         boxShadow: '0px 4px 20px 0px rgba(187, 187, 187, 0.25)',
+        marginTop: 18,
     },
     title: {
         color: '#2D2D2D',

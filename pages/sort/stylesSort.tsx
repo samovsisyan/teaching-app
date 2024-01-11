@@ -1,0 +1,88 @@
+import {StyleSheet} from "react-native";
+
+export const stylesSort = StyleSheet.create({
+    sortContainer: {
+        width: `${100}%`,
+        height: 34,
+        backgroundColor: '#FFF',
+        boxShadow: '0px 4px 20px 0px rgba(187, 187, 187, 0.25)',
+        display: 'flex',
+        justifyContent: 'space-between',
+        flexDirection: 'row',
+        alignItems: 'center',
+        paddingLeft: 8,
+        paddingRight: 8,
+    },
+    container: {
+        backgroundColor: 'white',
+        padding: 16,
+    },
+    sortText: {
+        color: '#4F4F4F',
+        fontSize: 10,
+        fontStyle: 'normal',
+        fontWeight: '500',
+    },
+    byPrice: {
+        width: 72,
+        height: 22,
+        borderColor: 'gray',
+        borderWidth: 0.5,
+        paddingHorizontal: 8,
+        borderRadius: 100,
+        border: '1px solid #828282',
+        backgroundColor: '#DE487800',
+    },
+    byRating: {
+        width: 72,
+        height: 22,
+        borderColor: 'gray',
+        borderWidth: 0.5,
+        paddingHorizontal: 8,
+        borderRadius: 100,
+        border: '1px solid #828282',
+        backgroundColor: '#DE487800',
+    },
+    byNumber: {
+        width: 176,
+        height: 22,
+        borderColor: 'gray',
+        borderWidth: 0.5,
+        paddingHorizontal: 8,
+        borderRadius: 100,
+        border: '1px solid #828282',
+        backgroundColor: '#DE487800',
+    },
+    icon: {
+        marginRight: 5,
+    },
+    label: {
+        position: 'absolute',
+        backgroundColor: 'white',
+        left: 22,
+        top: 8,
+        zIndex: 999,
+        paddingHorizontal: 8,
+        fontSize: 14,
+    },
+    placeholderStyle: {
+        color: '#828282',
+        fontSize: 10,
+        fontStyle: 'normal',
+        fontWeight: '400',
+    },
+    selectedTextStyle: {
+        color: '#828282',
+        fontSize: 10,
+        fontStyle: 'normal',
+        fontWeight: '400',
+    },
+    iconStyle: {
+        width: 12,
+        height: 8,
+    },
+    inputSearchStyle: {
+        height: 40,
+        fontSize: 16,
+    },
+});
