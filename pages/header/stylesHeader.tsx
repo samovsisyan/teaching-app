@@ -2,6 +2,26 @@ import {StyleSheet} from "react-native";
 import * as url from "url";
 
 export const stylesHeader = StyleSheet.create({
+    header: {
+
+    },
+    icons: {
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        paddingLeft: 20,
+        paddingRight: 20,
+    },
+    headerLogo: {
+        width: 126,
+        height: 52,
+        marginLeft: 40,
+    },
+    headerMenu: {
+        width: 34,
+        height: 34,
+    },
     headerContainer: {
         display: 'flex',
         flexDirection: 'row',
