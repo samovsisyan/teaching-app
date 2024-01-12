@@ -4,14 +4,16 @@ import Header from "./pages/header";
 import React from "react";
 import Tutors from "./pages/tutors";
 import Sort from "./pages/sort";
+import Forum from "./pages/forum";
 
 export default function App() {
     return (
         <SafeAreaView style={styles.container}>
             <View>
                 <Header />
-                <Sort />
-                <Tutors />
+                <Forum />
+                {/*<Sort />*/}
+                {/*<Tutors />*/}
                 {/*<Streams/>*/}
             </View>
         </SafeAreaView>

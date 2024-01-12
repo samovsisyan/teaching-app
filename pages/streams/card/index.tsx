@@ -5,7 +5,7 @@ import {stylesCard} from "./stylesCard";
 import {Buttons, HorizontalRule} from "../../../elements";
 const btnIcon = require('../../../assets/image/streams/Vector.png')
 
-const   Card: React.FC = () => {
+const Card: React.FC = () => {
     return (
         <View>
             <HorizontalRule  marginBottom={8} marginTop={8}/>
