@@ -1,16 +1,17 @@
 import {StyleSheet, Text, View, SafeAreaView} from 'react-native';
 import "./ReactotronConfig"
-import Streams from "./pages/streams";
 import Header from "./pages/header";
-import Sort from "./pages/sort";
+import React from "react";
+import Tutors from "./pages/tutors";
 
 export default function App() {
     return (
         <SafeAreaView style={styles.container}>
             <View>
                 <Header />
-                <Sort />
-                <Streams/>
+                <Tutors />
+                {/*<Sort />*/}
+                {/*<Streams/>*/}
             </View>
         </SafeAreaView>
     );

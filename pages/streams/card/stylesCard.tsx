@@ -12,6 +12,17 @@ export const stylesCard = StyleSheet.create({
         flexDirection: 'row',
     },
     userFaceInfo: {},
+    userStory: {
+        width: 88,
+        height: 88,
+        borderRadius: 50,
+        backgroundColor: '#E0E0E0',
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
+
+    },
     userInfo: {
         marginLeft: 22,
     },
@@ -20,6 +31,11 @@ export const stylesCard = StyleSheet.create({
         height: 77,
         borderRadius: 50,
         resizeMode: 'cover',
+    },
+    userImageContent: {
+        backgroundColor: '#fff',
+        borderRadius: 50,
+        padding: 2,
     },
     userName: {
         color: '#4F4F4F',

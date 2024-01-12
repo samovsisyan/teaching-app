@@ -12,9 +12,13 @@ const   Card: React.FC = () => {
             <View style={stylesCard.cardContainer}>
                 <View style={stylesCard.head}>
                     <View style={stylesCard.userFaceInfo}>
-                        <Image
-                            style={stylesCard.image}
-                            source={require('../../../assets/image/streams/user.png')}/>
+                        <View style={stylesCard.userStory}>
+                            <View style={stylesCard.userImageContent}>
+                                <Image
+                                    style={stylesCard.image}
+                                    source={require('../../../assets/image/streams/user.png')}/>
+                            </View>
+                        </View>
                         <Text style={stylesCard.userName}>John</Text>
                     </View>
                     <View style={stylesCard.userInfo}>
