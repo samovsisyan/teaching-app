@@ -242,11 +242,7 @@ export const stylesTutorsCard = StyleSheet.create({
         fontStyle: 'normal',
         fontWeight: '300',
     },
-    tutorHourlyRateFromPrice: {
-        color: '#4F4F4F',
-        fontSize: 14,
-        fontStyle: 'normal',
-        fontWeight: '500',
+    tutorHourlyRateFromPriceContainer: {
         width: 88,
         height: 34,
         borderRadius: 100,
@@ -260,6 +256,12 @@ export const stylesTutorsCard = StyleSheet.create({
         paddingBottom: 8,
         paddingLeft: 10,
         marginTop: 8,
+    },
+    tutorHourlyRateFromPrice: {
+        color: '#4F4F4F',
+        fontSize: 14,
+        fontStyle: 'normal',
+        fontWeight: '500',
     },
 
     tutorTrial: {
@@ -274,11 +276,7 @@ export const stylesTutorsCard = StyleSheet.create({
         fontStyle: 'normal',
         fontWeight: '300',
     },
-    tutorTrialPrice: {
-        color: '#4F4F4F',
-        fontSize: 14,
-        fontStyle: 'normal',
-        fontWeight: '500',
+    tutorTrialPriceContainer: {
         width: 88,
         height: 34,
         borderRadius: 100,
@@ -292,5 +290,11 @@ export const stylesTutorsCard = StyleSheet.create({
         paddingBottom: 8,
         paddingLeft: 10,
         marginTop: 8,
+    },
+    tutorTrialPrice: {
+        color: '#4F4F4F',
+        fontSize: 14,
+        fontStyle: 'normal',
+        fontWeight: '500',
     },
 });

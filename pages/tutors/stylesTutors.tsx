@@ -18,6 +18,6 @@ export const stylesTutors = StyleSheet.create({
         fontStyle: 'normal',
         fontWeight: '900',
         marginTop: 16,
-        marginBottom: 8,
+        marginBottom: 16,
     },
 });

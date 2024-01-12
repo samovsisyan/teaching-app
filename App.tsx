@@ -3,14 +3,15 @@ import "./ReactotronConfig"
 import Header from "./pages/header";
 import React from "react";
 import Tutors from "./pages/tutors";
+import Sort from "./pages/sort";
 
 export default function App() {
     return (
         <SafeAreaView style={styles.container}>
             <View>
                 <Header />
+                <Sort />
                 <Tutors />
-                {/*<Sort />*/}
                 {/*<Streams/>*/}
             </View>
         </SafeAreaView>

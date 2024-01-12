@@ -10,7 +10,6 @@ import { Rating, AirbnbRating } from 'react-native-elements';
 const TutorsCard: React.FC = () => {
     return (
         <View>
-            <HorizontalRule  marginBottom={8} marginTop={8}/>
             <View style={stylesTutorsCard.tutorCover}></View>
             <View style={stylesTutorsCard.tutorContainer}>
                 <View style={stylesTutorsCard.tutorImageAndRating}>
@@ -49,15 +48,21 @@ const TutorsCard: React.FC = () => {
                     <View style={stylesTutorsCard.tutorPrice}>
                         <View style={stylesTutorsCard.tutorHourlyRateFrom}>
                             <Text style={stylesTutorsCard.tutorHourlyRateFromLabel}>Hourly rate from</Text>
-                            <Text style={stylesTutorsCard.tutorHourlyRateFromPrice}>USD 15.90</Text>
+                            <View style={stylesTutorsCard.tutorHourlyRateFromPriceContainer}>
+                                <Text style={stylesTutorsCard.tutorHourlyRateFromPrice}>USD 15.90</Text>
+                            </View>
                         </View>
                         <View style={stylesTutorsCard.tutorTrial}>
                             <Text style={stylesTutorsCard.tutorTrialLabel}>Trial</Text>
-                            <Text style={stylesTutorsCard.tutorTrialPrice}>USD 8.00</Text>
+                            <View style={stylesTutorsCard.tutorTrialPriceContainer}>
+                                <Text style={stylesTutorsCard.tutorTrialPrice}>USD 8.00</Text>
+                            </View>
                         </View>
                     </View>
                 </View>
             </View>
+            <HorizontalRule  marginBottom={8} marginTop={8}/>
+
         </View>
     );
 };
