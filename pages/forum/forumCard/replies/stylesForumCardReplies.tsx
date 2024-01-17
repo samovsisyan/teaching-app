@@ -1,0 +1,121 @@
+import {StyleSheet} from "react-native";
+
+export const stylesForumCardReplies = StyleSheet.create({
+    browserInformationContent: {
+        paddingLeft: 16,
+        paddingRight: 16,
+    },
+    browserInformationText: {
+        color: '#828282',
+        textAlign: 'center',
+        fontSize: 12,
+        fontStyle: 'normal',
+        fontWeight: '400',
+        lineHeight: 24,
+    },
+    repliesContainer: {
+        paddingLeft: 18,
+        paddingTop: 18,
+        paddingRight: 18,
+        paddingBottom: 18,
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'flex-start',
+    },
+    repliesUserContainer: {
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'flex-start',
+        alignItems: 'center',
+    },
+    repliesUserIcon: {
+        width: 28,
+        height: 28,
+        borderRadius: 50,
+    },
+    repliesUserInfo: {
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'flex-start',
+        alignItems: 'flex-start',
+        marginLeft: 10,
+    },
+    repliesUserName: {
+        color: '#4F4F4F',
+        fontSize: 12,
+        fontStyle: 'normal',
+        fontWeight: '400',
+    },
+    repliesUserStatusContainer: {
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'flex-start',
+        alignItems: 'center',
+        marginTop: 4,
+    },
+    repliesUserStatusText: {
+        color: '#828282',
+        fontSize: 8,
+        fontStyle: 'normal',
+        fontWeight: '300',
+    },
+    repliesUserStatusIcon: {
+        width: 8,
+        height: 8,
+        marginLeft: 6,
+    },
+
+
+    repliesTextContainer: {
+        marginTop: 22,
+    },
+    repliesText: {
+        color: '#828282',
+        textAlign: 'center',
+        fontSize: 12,
+        fontStyle: 'normal',
+        fontWeight: '400',
+        lineHeight: 18,
+    },
+    repliesDateContainer: {
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+    },
+    repliesDate: {
+        color: '#4F4F4F',
+        textAlign: 'center',
+        fontSize: 8,
+        fontStyle: 'normal',
+        fontWeight: '300',
+        marginTop: 16,
+        flex: 1,
+    },
+    repliesMoreBtnContainer: {
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginBottom: 16,
+        marginTop: 8,
+    },
+    repliesMoreBtn: {
+        paddingLeft: 24,
+        paddingTop: 10,
+        paddingRight: 24,
+        paddingBottom: 10,
+        borderRadius: 100,
+        borderColor: '#E0E0E0',
+        borderWidth: 1,
+        backgroundColor: '#2D2D2D',
+    },
+    repliesMoreBtnText: {
+        color: '#fff',
+        textAlign: 'center',
+        fontSize: 12,
+        fontStyle: 'normal',
+        fontWeight: '400',
+    },
+});

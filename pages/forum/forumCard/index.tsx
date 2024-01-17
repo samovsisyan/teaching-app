@@ -1,11 +1,19 @@
-import React from 'react';
-import {Image, ScrollView, Text, View} from 'react-native';
+import React, {useState} from 'react';
+import {Image, ScrollView, Text, TouchableOpacity, View} from 'react-native';
 import {stylesForumCard} from './stylesForumCard';
 import {stylesCard} from "../../streams/card/stylesCard";
 import {stylesForumTags} from "../forumTags/stylesForumTags";
 import {HorizontalRule} from "../../../elements";
+import Replies from "./replies";
+
 
 const ForumCard: React.FC = () => {
+
+    const [toggleBrowserInfo, setToggleBrowserInfo] = useState<boolean>(false)
+    const _onToggleBrowserInfo = (): void => {
+        setToggleBrowserInfo(!toggleBrowserInfo)
+    }
+
     return (
         <View>
             <View style={stylesForumCard.forumCardContainer}>
@@ -56,15 +64,19 @@ const ForumCard: React.FC = () => {
                 </View>
             </View>
             <View style={stylesForumCard.forumCardButtons}>
-                <View style={stylesForumCard.forumCardBtnBrowseContainer}>
-                    <Text style={stylesForumCard.forumCardBtnBrowseName}>Browse</Text>
-                </View>
+                <TouchableOpacity style={stylesForumCard.forumCardBtnBrowseContainer} onPress={_onToggleBrowserInfo}>
+                    <Text style={stylesForumCard.forumCardBtnBrowseName}>
+                        {!toggleBrowserInfo ? 'Browse' : 'To close'}
+                    </Text>
+                </TouchableOpacity>
                 <View style={stylesForumCard.forumCardBtnReplyContainer}>
                     <Text style={stylesForumCard.forumCardBtnReplyName}>Reply</Text>
                 </View>
             </View>
         </View>
-        <HorizontalRule  marginTop={0} marginBottom={10}/>
+
+        <Replies toggleBrowserInfo={toggleBrowserInfo}/>
+        {!toggleBrowserInfo && <HorizontalRule marginTop={0} marginBottom={10}/>}
         </View>
     );
 };
