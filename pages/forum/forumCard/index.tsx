@@ -1,17 +1,31 @@
 import React, {useState} from 'react';
-import {Image, ScrollView, Text, TouchableOpacity, View} from 'react-native';
+import {Image, Text, TouchableOpacity, View} from 'react-native';
 import {stylesForumCard} from './stylesForumCard';
-import {stylesCard} from "../../streams/card/stylesCard";
-import {stylesForumTags} from "../forumTags/stylesForumTags";
 import {HorizontalRule} from "../../../elements";
 import Replies from "./replies";
 
 
-const ForumCard: React.FC = () => {
+interface ForumCardProps { }
 
+const ForumCard: React.FC<ForumCardProps> = () => {
     const [toggleBrowserInfo, setToggleBrowserInfo] = useState<boolean>(false)
+    const [toggleReply, setToggleReply] = useState<boolean>(false)
+    const [replyData, setReplyData] = useState([
+        'As has been repeatedly mentioned,the supporters of totalitarianism in science to this day remain the lot of liberals who are eager to be exposed',
+        'As has been repeatedly mentioned,the supporters of totalitarianism in science to this day remain the lot of liberals who are eager to be exposed',
+        'As has been repeatedly mentioned,the supporters of totalitarianism in science to this day remain the lot of liberals who are eager to be exposed',
+    ])
     const _onToggleBrowserInfo = (): void => {
         setToggleBrowserInfo(!toggleBrowserInfo)
+        setToggleReply(false)
+    }
+    const _onToggleReply = (): void => {
+        setToggleReply(true)
+        setToggleBrowserInfo(true)
+    }
+
+    const _onHandleAddNewReply = (replyValue: any): void => {
+        setReplyData(prevReplyData => [replyValue, ...prevReplyData]);
     }
 
     return (
@@ -64,18 +78,25 @@ const ForumCard: React.FC = () => {
                 </View>
             </View>
             <View style={stylesForumCard.forumCardButtons}>
-                <TouchableOpacity style={stylesForumCard.forumCardBtnBrowseContainer} onPress={_onToggleBrowserInfo}>
+                <TouchableOpacity style={stylesForumCard.forumCardBtnBrowseContainer}
+                                  onPress={_onToggleBrowserInfo}>
                     <Text style={stylesForumCard.forumCardBtnBrowseName}>
                         {!toggleBrowserInfo ? 'Browse' : 'To close'}
                     </Text>
                 </TouchableOpacity>
-                <View style={stylesForumCard.forumCardBtnReplyContainer}>
+                <TouchableOpacity style={stylesForumCard.forumCardBtnReplyContainer}
+                                  onPress={_onToggleReply}>
                     <Text style={stylesForumCard.forumCardBtnReplyName}>Reply</Text>
-                </View>
+                </TouchableOpacity>
             </View>
         </View>
 
-        <Replies toggleBrowserInfo={toggleBrowserInfo}/>
+        <Replies
+            toggleBrowserInfo={toggleBrowserInfo}
+            replyData={replyData}
+            _onHandleAddNewReply={_onHandleAddNewReply}
+            toggleReply={toggleReply}
+        />
         {!toggleBrowserInfo && <HorizontalRule marginTop={0} marginBottom={10}/>}
         </View>
     );

@@ -1,15 +1,25 @@
-import React from 'react';
-import {Button, Image, Text, TextInput, TouchableOpacity, View} from 'react-native';
+import React, {useState} from 'react';
+import {Image, Text, TextInput, TouchableOpacity, View} from 'react-native';
 import {stylesForumCardWriteReply} from './stylesForumCardWriteReply';
 import {HorizontalRule} from "../../../../elements";
-import {stylesForumCardReplies} from "../replies/stylesForumCardReplies";
-import {Input} from "react-native-elements";
+
 
 interface WriteReplyProps {
-    toggleBrowserInfo: boolean
+    toggleBrowserInfo: boolean,
+    _onHandleAddNewReply: any,
 }
 
-const WriteReply: React.FC<WriteReplyProps> = ({toggleBrowserInfo}) => {
+const WriteReply: React.FC<WriteReplyProps> =
+    ({
+        toggleBrowserInfo,
+        _onHandleAddNewReply,
+    }) => {
+    const [replyValue, setReplyValue] = useState('');
+
+    const _onHandleChange = (text: any): void => {
+        setReplyValue(text);
+    }
+
     return (
         <>
             {toggleBrowserInfo &&
@@ -36,13 +46,17 @@ const WriteReply: React.FC<WriteReplyProps> = ({toggleBrowserInfo}) => {
                         <View style={stylesForumCardWriteReply.writeReplyInputContainer}>
                             <TextInput
                                 style={stylesForumCardWriteReply.writeReplyInput}
-                                placeholder="Enter the text"
-                                onChangeText={() => {}}
-                                value={''}
+                                placeholder="Type something..."
+                                value={replyValue}
+                                onChangeText={_onHandleChange}
                             />
+
                             <View style={stylesForumCardWriteReply.writeReplySaveBtnContainer}>
-                                <TouchableOpacity style={stylesForumCardWriteReply.writeReplySaveBtn} onPress={() => {
-                                }}>
+                                <TouchableOpacity style={stylesForumCardWriteReply.writeReplySaveBtn}
+                                                  onPress={() => {
+                                                      _onHandleAddNewReply(replyValue)
+                                                      setReplyValue('')
+                                                  }}>
                                     <Text style={stylesForumCardWriteReply.writeReplySaveBtnText}>Save</Text>
                                 </TouchableOpacity>
                             </View>
